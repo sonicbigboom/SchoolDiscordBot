@@ -1,20 +1,21 @@
-import discord
-from discord.ext import commands
+#Client
+import client
 
+#Events
+
+
+#Commands
+import ping_command
+
+#Config
 import config
 
-client = commands.Bot(command_prefix = '$')
-
-@client.event
+@client.client.event
 async def on_ready(): 
     print('Bot is ready.')
 
-@client.command()
-async def ping(ctx):
-    await ctx.send(f'Pong! {round(client.latency * 1000)}ms')
+client.client.run(config.TOKEN)
 
-
-client.run(config.TOKEN)
-
-
+#pls dont roast me for this
+#actually so overcomplicated, you only need like 4 commands for the bot lol
 
