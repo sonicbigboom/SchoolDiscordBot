@@ -1,6 +1,8 @@
 import discord
 from discord.ext import commands
 
+import checks
+
 client = commands.Bot(command_prefix = '$')
 print("Setting up discord client...")
 
