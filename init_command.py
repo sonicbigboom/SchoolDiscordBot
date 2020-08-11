@@ -6,7 +6,7 @@ async def init(ctx, *, arg):
     message = ctx.message
     author = ctx.author
 
-    guild = message.guild
+    guild = ctx.guild
     ref = client.db.reference(f'{guild.id}')
 
     if ref.get() is None:
