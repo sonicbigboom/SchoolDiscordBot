@@ -8,6 +8,7 @@ import client
 import ping_command
 import init_command
 import create_command
+import join_command
 
 #Config
 import config
