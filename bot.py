@@ -9,6 +9,7 @@ import ping_command
 import init_command
 import create_command
 import join_command
+import stop_command
 
 #Config
 import config
@@ -16,6 +17,7 @@ import config
 @client.client.event
 async def on_ready(): 
     print('Bot is ready.')
+    print(client.client.owner_ids)
 
 client.client.run(config.TOKEN)
 
