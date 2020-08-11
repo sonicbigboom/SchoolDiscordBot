@@ -7,6 +7,7 @@ import client
 #Commands
 import ping_command
 import init_command
+import create_command
 
 #Config
 import config

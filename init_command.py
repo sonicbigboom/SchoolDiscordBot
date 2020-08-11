@@ -15,7 +15,8 @@ async def init(ctx, *, arg):
             ref.set({
                 f'{guild.id}': 
                     {
-                        'Name': f'{arg}'
+                        'Name': f'{arg}',
+                        'Classes': '{}'
                     }   
             })
             await ctx.send(f'>>> Adding new school {arg} with server ID: {guild.id}')
