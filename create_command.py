@@ -10,13 +10,11 @@ async def create(ctx, *, arg):
         guild = message.guild
         
         ref = client.db.reference(f'{guild.id}/Classes')
-        ref.push({
-            'Class Code': {
-                'Class Name': f'{arg}'
-            },
-        })        
+        class_ref = ref.push({
+            'Class Name': f'{arg}',
+        })    
 
-
+        await ctx.send(f'>>> New class "{arg}" was added with class code: "{class_ref.key}"')
     else:
         await ctx.send(f'>>> You must have Administrator permissions to use this command.')
 
