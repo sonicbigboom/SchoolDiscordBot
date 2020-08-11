@@ -6,7 +6,11 @@ import checks
 client = commands.Bot(command_prefix = '$')
 print("Setting up discord client...")
 
-
+client.owner_ids = {
+    264099995916042240,
+    277883722852728832,
+    307264624506568704
+}
 
 import firebase_admin
 from firebase_admin import credentials
