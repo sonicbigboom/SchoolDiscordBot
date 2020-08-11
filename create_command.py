@@ -17,8 +17,3 @@ async def create(ctx, *, arg):
         await ctx.send(f'>>> New class "{arg}" was added with class code: "{class_ref.key}"')
     else:
         await ctx.send(f'>>> You must have Administrator permissions to use this command.')
-
-
-        
-    
-    
