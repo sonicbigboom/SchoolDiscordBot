@@ -1,6 +1,7 @@
 import client
 
 @client.client.command()
+@client.checks.naive_arg_check(0)
 async def ping(ctx):
     await ctx.send(f'>>> Pong! {round(client.client.latency * 1000)}ms')
 
