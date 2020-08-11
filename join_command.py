@@ -3,9 +3,8 @@ import client
 @client.client.command()
 async def join(ctx, arg):
     message = ctx.message
-    author = message.author
-    guild_permissions = author.guild_permissions
-    guild = message.guild
+    author = ctx.author
+    guild = ctx.guild
         
 
     #Adds students to the student list if not already there
