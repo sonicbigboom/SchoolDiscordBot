@@ -12,6 +12,7 @@ import join_command
 import stop_command
 import add_command
 import classes_command
+import meets_command
 
 #Config
 import config

@@ -18,6 +18,7 @@ async def classes(ctx):
         classTeacher = value['Teacher']
 
         if f'{author.id}' == f'{classTeacher}':
+            result += "     "
             result += className
             result += "   "
             result += classCode

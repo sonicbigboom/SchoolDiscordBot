@@ -25,7 +25,7 @@ async def add(ctx, code, day, start, end):
                 #Adds class to meets
                 ref = client.db.reference(f'{guild.id}/Meets')
                 ref.child(f'{day.lower()} {start}').update({
-                    f'{code}': 'true',
+                    f'{code}': f'{end}',
                 })
 
                 await ctx.send(f'>>> Class meet was added on "{day}" at time "{start}" to "{end}"')
