@@ -9,7 +9,7 @@ async def init(ctx, *, arg):
     guild = ctx.guild
     ref = client.db.reference(f'{guild.id}')
 
-    if ref.get() is None:
+    if not ref.get():
         ref = client.db.reference('/')
         ref.set({
             f'{guild.id}': 

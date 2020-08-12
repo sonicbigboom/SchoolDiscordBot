@@ -9,11 +9,11 @@ async def add(ctx, code, day, start, end):
     
     ref = client.db.reference(f'{guild.id}/Classes/{code}')
     
-    if ref.get() is not None:
+    if ref.get():
         ref = client.db.reference(f'{guild.id}/Classes/{code}/Blocks')
-        if ref.get() is not None:
+        if ref.get():
             ref = client.db.reference(f'{guild.id}/Classes/{code}/Blocks/{day.lower()} {start}')
-            if ref.get() is not None:
+            if ref.get():
                 await ctx.send(f'>>> This class already has a meet set up at this time')
             else:
                 #Adds meet to blocks
