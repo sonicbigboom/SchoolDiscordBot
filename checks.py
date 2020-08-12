@@ -32,10 +32,9 @@ def is_admin():
     return commands.check(predicate)
 
 def naive_arg_check(num_args):
-    #not finished yet
     async def predicate(ctx):
-        args = ctx.args
+        args = ctx.message.split(' ')[1:]
         print(f'Passed in {args} arguments and command takes in {num_args}')
-        return True
+        return args == num_args
     
     return commands.check(predicate)
