@@ -18,6 +18,7 @@ def is_guild_owner():
             return True
         else:
             await ctx.send('>>> You are not the guild owner.')
+            return False
 
     return commands.check(predicate)
 
@@ -39,5 +40,6 @@ def naive_arg_check(num_args):
             return True
         else:
             await ctx.send(f'>>> This command requires {num_args} arguments and you passed in {args}.')
+            return False
     
     return commands.check(predicate)
