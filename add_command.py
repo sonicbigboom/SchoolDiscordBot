@@ -45,7 +45,4 @@ async def add(ctx, code, day, start, end):
             await ctx.send(f'>>> Class meet was added on "{day}" at time "{start}" to "{end}"')
     else:
         await ctx.send(f'>>> No class was found with code: "{code}"')
-    
-
-    
-    
+        
