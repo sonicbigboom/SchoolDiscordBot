@@ -5,14 +5,14 @@ import client
 
 
 #Commands
-import ping_command
-import init_command
-import create_command
-import join_command
-import stop_command
-import add_command
-import classes_command
-import meets_command
+from Commands import ping_command
+from Commands import init_command
+from Commands import create_command
+from Commands import join_command
+from Commands import stop_command
+from Commands import add_command
+from Commands import classes_command
+from Commands import meets_command
 
 #Config
 import config
@@ -23,7 +23,4 @@ async def on_ready():
     print(client.client.owner_ids)
 
 client.client.run(config.TOKEN)
-
-#pls dont roast me for this
-#actually so overcomplicated, you only need like 4 commands for the bot lol
 
