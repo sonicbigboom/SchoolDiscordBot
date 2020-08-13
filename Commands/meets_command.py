@@ -15,7 +15,7 @@ async def meets(ctx, arg):
         dayAndStart = key
         meetData = value
 
-        if meetData[f'{arg}'] is not None:
+        if arg in meetData:
             result += "     "
             result += dayAndStart
             result += " - "
